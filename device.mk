@@ -6,3 +6,15 @@
 #
 
 LOCAL_PATH := device/realme/RMX3195
+
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.device \
+    ro.product.name
